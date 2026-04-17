@@ -1,0 +1,333 @@
+@font-face {
+  font-family: "Open Baskerville";
+  src: url("./fonts/OpenBaskerville0053-Rd7W.otf ") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Baskerville", serif;
+}
+
+
+/*Header Header Header*/
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3F51B5;
+  color: black;
+  padding: 10px 20px;
+  
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-section img {
+  height: 90px;
+  width: 90px;
+  margin-right: 10px;
+  border-radius: 50%; 
+  
+}
+
+.logo-section h1 {
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+hr {
+  border: none;
+  border-top: 10px solid rgba(0, 0, 0, 1);
+  margin: 0px 0;
+}
+
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
+}
+
+.parish-info {
+  position: relative;
+  display: inline-block;
+}
+
+#parish-toggle {
+  color: #000000;
+  text-decoration: underline;  
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;           
+  text-align: center;
+}
+
+#parish-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  color: #3F51B5;
+  border-radius: 5px;
+  padding: 0px;
+  width: fit-content;
+  z-index: 1000;
+}
+
+#parish-nav ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#parish-nav li:hover {
+  display: block;
+  border-radius: 5px;
+  margin: 0px 0;
+  background-color: #fff;
+  text-align: center;
+  border-left: #000000 solid 2px;
+  border-right: #000000 solid 2px;
+}
+
+#parish-nav a {
+  display: block;
+  padding: 10px;
+  color: #3F51B5;
+  text-decoration: none;
+}
+
+ /*Header Header Header*/
+
+ /*content content content*/
+hr{
+  border: none;
+  border-top: 10px solid rgba(0, 0, 0, 1);
+  margin: 0px 0;
+}
+
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(83, 198, 214);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .tile {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .tile img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      padding: 5px;
+    }
+
+    .tile p {
+      padding: 15px;
+      font-size: 15px;
+      color: #333;
+      text-align: center;
+      font-weight: bold;
+    }
+
+ /*content content content*/
+
+ /*footer footer footer*/
+
+
+ footer {
+  background: #3F51B5;
+  text-align: center;
+  padding: 5px;
+  clear: both;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logos img {
+ height: 90px;
+  width: 90px;
+  margin-right: 10px;
+  border-radius: 50%; 
+  align-items: center;
+}
+
+.parish-name h3 {
+  margin: 0;
+  font-weight: bold;
+  font-family: "Libre Baskerville", serif;
+}
+
+.small-text {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.contact {
+  position: relative;
+  display: inline-block;
+}
+
+#contact-btn {
+  background-color: #fff;
+  color: #3F51B5;
+  border: 2px solid #000000;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-right: 60px;
+  width: 220px; 
+}
+
+#contact-nav {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-color: #fff;
+  color: #3F51B5;
+  border-radius: 5px;
+  padding: 5px;
+  width: 220px;
+}
+
+#contact-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#contact-nav li:hover {
+  border: 2px solid #000000;
+}
+
+.nav-buttons li:hover {
+  background-color: #3F51B5;
+  color: #fff;
+}
+.hidden {
+  display: none;
+}
+
+.rights {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/*footer footer footer*/
+
+
+/*queries queries queries*/
+
+@media (max-width: 768px) {
+
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+   .footer-content {
+    flex-direction: column;  
+    align-items: center;      
+    text-align: center;       
+  }
+
+  .footer-content img {
+    margin: 5px 0;           
+  }
+
+  .parish-name, .contact {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .site-header {
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    padding: 10px 15px;
+  }
+
+  .logo-section h1 {
+    font-size: 20px;
+  }
+
+  .nav-links ul {
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    justify-content: flex-end;
+  }
+
+  .nav-links li {
+    margin-left: 10px;
+    font-size: 15px;
+  }
+
+  .tile img{
+    padding: 10px;
+  }
+
+  .footer-content{
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    padding: 20px;
+    place-items: center;
+    }
+    
+  .footer-content h3 {
+    font-size: 1rem;        
+  }
+
+  .footer-content p {
+    font-size: 0.8rem;
+  }
+}
+
+/*queries queries queries*/
