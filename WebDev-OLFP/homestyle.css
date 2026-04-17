@@ -1,0 +1,525 @@
+/* @font-face {
+  font-family: "Libre Baskerville";
+  src: url("./fonts/LibreBaskerville-DpdE.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("./fonts/LibreBaskervilleBold-A606.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("./fonts/LibreBaskervilleItalic-q8K6.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+*/
+@font-face {
+  font-family: "Open Baskerville";
+  src: url("./fonts/OpenBaskerville0053-Rd7W.otf ") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: "Baskerville", serif;
+}
+
+/*Header Header Header*/
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3F51B5;
+  color: black;
+  padding: 10px 20px;
+  
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-section img {
+  height: 90px;
+  width: 90px;
+  margin-right: 10px;
+  border-radius: 50%; 
+  
+}
+
+.logo-section h1 {
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  font-size: 40px;
+  font-weight: bold;
+}
+hr {
+  border: none;
+  border-top: 10px solid rgba(0, 0, 0, 1);
+  margin: 0px 0;
+}
+
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
+}
+
+.parish-info {
+  position: relative;
+  display: inline-block;
+}
+
+#parish-toggle {
+  color: #000000;
+  text-decoration: underline;  
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;           
+  text-align: center;
+}
+
+#parish-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  color: #3F51B5;
+  border-radius: 5px;
+  padding: 0px;
+  width: fit-content;
+  z-index: 1000;
+}
+
+#parish-nav ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#parish-nav li:hover {
+  display: block;
+  border-radius: 5px;
+  margin: 0px 0;
+  background-color: #fff;
+  text-align: center;
+  border-left: #000000 solid 2px;
+  border-right: #000000 solid 2px;
+}
+
+#parish-nav a {
+  display: block;
+  padding: 10px;
+  color: #3F51B5;
+  text-decoration: none;
+}
+
+ /*Header Header Header*/
+
+/* Content Content Content*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;  
+  max-width: 1600px;
+  margin: 0 auto;     
+  padding: 5px;
+  display: block;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px; 
+  clear: both;         
+}
+
+section img {
+  width: 100%;
+  height: auto;
+}
+
+.content img{
+    width: 100%;
+    height: auto;
+}
+
+body {
+  background-color: rgb(83, 198, 214);
+}
+.content h2{
+    font-family: "Libre Baskerville", sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.content p{
+    font-family: "Libre Baskerville", sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+.mass-schedule {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  margin-top: 0px;  
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 5px;
+}
+
+.background-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.schedule-box {
+  position: absolute;
+  background: rgba(242, 197, 51, 0.85); 
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.schedule-box h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;  
+}
+
+.schedule-grid .day {
+  flex: 1 1 200px; 
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+.day h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.day p {
+  font-size: 24px;
+  margin: 0;
+}
+
+
+.bg-img {
+  width: 100%;
+  height: auto;
+}
+
+.vision-mission {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  margin-top: 5px;  
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  display: grid;
+  position: absolute;
+  flex: 1 1 200px; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  background: rgba(115, 133, 236, 0.9);
+  gap: 20px;
+  padding: 0px;
+  border-radius: 8px;
+  border-width: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mvcontent h2 {
+  margin-top: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mvcontent p {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* Content Content Content*/
+
+/*footer footer footer*/
+
+footer {
+  background: #3F51B5;
+  text-align: center;
+  padding: 5px;
+  clear: both;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logos img {
+ height: 90px;
+  width: 90px;
+  margin-right: 10px;
+  border-radius: 50%; 
+  align-items: center;
+}
+
+.parish-name h3 {
+  margin: 0;
+  font-weight: bold;
+  font-family: "Libre Baskerville", serif;
+}
+
+.small-text {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.contact {
+  position: relative;
+  display: inline-block;
+}
+
+#contact-btn {
+  background-color: #fff;
+  color: #3F51B5;
+  border: 2px solid #000000;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-right: 60px;
+  width: 220px; 
+}
+
+#contact-nav {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background-color: #fff;
+  color: #3F51B5;
+  border-radius: 5px;
+  padding: 5px;
+  width: 220px;
+}
+
+#contact-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#contact-nav li:hover {
+  border: 2px solid #000000;
+}
+
+.nav-buttons li:hover {
+  background-color: #3F51B5;
+  color: #fff;
+}
+.hidden {
+  display: none;
+}
+
+.rights {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+
+/*footer footer footer*/
+
+/*queries queries queries*/
+
+@media (max-width: 768px) {
+
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .schedule-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mvcontent {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .schedule-box.box {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .footer-content {
+    flex-direction: column;  
+    align-items: center;      
+    text-align: center;       
+  }
+
+  .footer-content img {
+    margin: 5px 0;           
+  }
+
+  .parish-name, .contact {
+    margin-top: 10px;
+  }
+    
+}
+
+
+@media (max-width: 480px) {
+
+  .site-header {
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    padding: 10px 15px;
+  }
+
+  .logo-section h1 {
+    font-size: 20px;
+  }
+
+  .nav-links ul {
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    justify-content: flex-end;
+  }
+
+  .nav-links li {
+    margin-left: 10px;
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .schedule-box h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .day h3 {
+    font-size: 1rem;
+  }
+
+  .day p {
+    font-size: 0.9rem;
+  }
+
+  .mvcontent h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .mvcontent p {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .content img,
+  .background-img,
+  .bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .footer-content{
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    padding: 20px;
+    place-items: center;
+    }
+    
+  .footer-content h3 {
+    font-size: 1rem;        
+  }
+
+  .footer-content p {
+    font-size: 0.8rem;
+  }
+
+}

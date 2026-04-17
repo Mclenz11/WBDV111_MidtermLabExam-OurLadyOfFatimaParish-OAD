@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="faithStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    
+    <title>Our Lady of Fatima Parish-OAD - Faith Background</title>
+</head>
+<body>
+
+    <header class="site-header">
+    <div class="logo-section">
+      <img src="./images/OLFP with bg.png" alt="Our Lady of Fatima Parish-OAD Logo">
+      <img src="./images/DOF no BG.png" alt="Diocese of Antipolo Logo">
+      <h1>OUR LADY OF FATIMA PARISH-OAD</h1>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="./home.html">HOME</a></li>
+        <li><div class="parish-info">
+ <span id="parish-toggle">PARISH</span>
+        <nav id="parish-nav" class="hidden">
+          <ul>
+            <li><a href="./history.html">Parish History </a></li>
+            <li><a href="./faith.html">Faith Background</a></li>
+            <li><a href="./clergy.html">Clergy</a></li>
+          </ul>
+</div></li>
+        <li><a href="./services.html">SACRAMENTS</a></li>
+        <li><a href="./donation.html">DONATION</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main class="content">
+    <section class="gallery">
+        <div class="gallery-item"><img src="./images/1.png" alt="Parish Front Facade"></div>
+        <div class="gallery-item"><img src="./images/2.png" alt="Parish Altar"></div>
+        <div class="gallery-item"><img src="./images/4.png" alt="Parish Altar"></div>
+    </section>
+
+    <section class="history-section">
+        <h2>Historical Background</h2>
+        <p>On May 13, 1917, three shepherd children Lucia dos Santos and her cousins Francisco and Jacinta Marto said they saw a beautiful lady dressed in white while tending sheep in Cova da Iria, near Fatima.</p>
+        <p>The lady later identified herself as the "Lady of the Rosary," but became widely known as Our Lady of Fatima.</p>
+    </section>
+
+    <section class="content-grid">
+        <div class="card">
+            <div class="card-header">The Apparitions</div>
+            <div class="card-body">
+                <p>The Virgin Mary appeared six times between May 13 and October 13, 1917.</p>
+                <ul>
+                    <li>Prayer, especially the Rosary</li>
+                    <li>Repentance and Conversion</li>
+                    <li>Peace in the world</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">The Miracle of the Sun</div>
+            <div class="card-body">
+                <p>On October 13, 1917, around 70,000 people gathered and witnessed the sun appear to move or "dance" in the sky.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">The Three Secrets</div>
+            <div class="card-body">
+                <ul>
+                    <li>A vision of hell</li>
+                    <li>A prophecy of World War II</li>
+                    <li>Persecution of the Church</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Recognition</div>
+            <div class="card-body">
+                <p>In 1930, the Catholic Church declared the apparitions worthy of belief.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="card significance">
+        <div class="card-header">Significance</div>
+        <div class="card-body">
+            <ul class="mb-0">
+                <li>Devotion to the Rosary</li>
+                <li>Penance and Faith</li>
+                <li>Peace and Hope</li>
+            </ul>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="logos">
+        <img src="./images/OLFP with bg.png" alt="Our Lady of Fatima Parish-OAD Logo">
+        <img src="./images/DOF no BG.png" alt="Diocese of Antipolo Logo">
+      </div>
+      <div class="parish-name">
+        <h3>OUR LADY OF FATIMA PARISH-OAD</h3>
+        <p class="small-text">
+          Our Lady of Fatima Parish-OAD, Sitio Capatagan, Pinugay road, San Jose, Antipolo City.
+        </p>
+        <p class="rights">ALL RIGHTS RESERVED 2026</p>
+      </div>
+      <div class="contact">
+        <button id="contact-btn">CONTACT US</button>
+        <nav id="contact-nav" class="hidden">
+          <ul>
+            <li><a href="mailto:ourladyoffatimaparish.oad@gmail.com" style="font-size: smaller;">Email: ourladyoffatimaparish.oad@gmail.com </a></li>
+            <li><a href="https://www.facebook.com/OurLadyOfFatimaParishOAD" target="_blank">Facebook</a></li>
+            <li><a href="tel:287248634">Phone Number:287248634 </a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    
+  </footer>
+
+  <script>
+    const contactBtn = document.getElementById('contact-btn');
+    const contactNav = document.getElementById('contact-nav');
+
+    contactBtn.addEventListener('click', () => {
+      contactNav.classList.toggle('hidden');
+    });
+
+    const parishToggle = document.getElementById('parish-toggle');
+    const parishNav = document.getElementById('parish-nav');
+
+    parishToggle.addEventListener('click', () => {
+    parishNav.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
