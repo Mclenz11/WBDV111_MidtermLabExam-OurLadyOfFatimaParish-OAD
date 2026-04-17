@@ -299,6 +299,27 @@ footer {
 
 
 @media screen and (max-width: 480px) {
+ .site-header {
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    padding: 10px 15px;
+  }
+
+  .logo-section h1 {
+    font-size: 20px;
+  }
+
+  .nav-links ul {
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    justify-content: flex-end;
+  }
+
+  .nav-links li {
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  
   body {
     font-size: 16px;
   }
