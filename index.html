@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="homestyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <title>Our Lady of Fatima Parish-OAD -Homepage</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-section">
+      <img src="./images/OLFP with bg.png" alt="Our Lady of Fatima Parish-OAD Logo">
+      <img src="./images/DOF no BG.png" alt="Diocese of Antipolo Logo">
+      <h1>OUR LADY OF FATIMA PARISH-OAD</h1>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="./index.html">HOME</a></li>
+        <li><div class="parish-info">
+ <span id="parish-toggle">PARISH</span>
+        <nav id="parish-nav" class="hidden">
+          <ul>
+            <li><a href="./history.html">Parish History </a></li>
+            <li><a href="./faith.html">Faith Background</a></li>
+            <li><a href="./clergy.html">Clergy</a></li>
+          </ul>
+</div></li>
+        <li><a href="./services.html">SACRAMENTS</a></li>
+        <li><a href="./donation.html">DONATION</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="content">
+    <section class="welcome">
+    <img src="./images/6.png" alt="Church Image">
+     
+    <h2>Welcome to Our Lady of Fatima Parish-OAD Website!</h2>
+    <p>The Our Lady of Fatima Parish-OAD Antipolo is a Roman Catholic and a Missionary Parish in the Diocese of Antipolo,  under the care of the Augustinians or Ordo Augustiniensium Discalceatorum (OAD),  dedicated to bringing God's goodness to His people in the spirit of humility</p>
+    </section>
+    <hr>
+
+  <section class="mass-schedule">
+    <picture>
+      <source media="(max-width: 480px)" srcset="./images/12.png">
+      <source media="(max-width: 768px)" srcset="./images/3.png">
+      <img src="./images/3.png" alt="Seat Image" class="background-img">
+    </picture>
+  
+
+  <div class="schedule-box">
+    <h2>Schedule of Mass</h2>
+    <div class="schedule-grid">
+      <div class="day">
+        <h3>Tuesday to Friday</h3>
+        <p>6pm</p>
+      </div>
+      <div class="day">
+        <h3>Saturday</h3>
+        <p>6am &amp; 6pm</p>
+      </div>
+      <div class="day">
+        <h3>Sunday</h3>
+        <p>6am, 10:30am, &amp; 6pm</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<hr>
+  <!-- Vision and Mission Section -->
+  <section class="vision-mission">
+    <picture>
+      <source media="(max-width: 480px)" srcset="./images/13.png">
+      <source media="(max-width: 768px)" srcset="./images/2.png">
+      <img src="./images/2.png" alt="Altar Image" class="bg-img">
+    </picture>
+
+  <section class="box">
+    <div class="mvcontent">
+      <h2>VISION</h2>
+      <p>
+        A community of disciples of the Risen Christ Enlightened by the Word of God Nourished by the Eucharist and Committed to the stewardship of God’s creation Journeying towards the Kingdom of God with Mary, Our Lady of Antipolo.
+      </p>
+    </div>
+    <div class="mvcontent">
+      <h2>MISSION</h2>
+      <p>
+        Form and train people in the work of spreading God’s Word to the Community. Strive to receive the Sacraments and be transformed for others; Give witness to the life and mission of the Church towards the realization of God’s Kingdom.
+      </p>
+    </div>
+  </section>
+  </section>
+<hr>
+
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="logos">
+        <img src="./images/OLFP with bg.png" alt="Our Lady of Fatima Parish-OAD Logo">
+        <img src="./images/DOF no BG.png" alt="Diocese of Antipolo Logo">
+      </div>
+      <div class="parish-name">
+        <h3>OUR LADY OF FATIMA PARISH-OAD</h3>
+        <p class="small-text">
+          Our Lady of Fatima Parish-OAD, Sitio Capatagan, Pinugay road, San Jose, Antipolo City.
+        </p>
+        <p class="rights">ALL RIGHTS RESERVED 2026</p>
+      </div>
+      <div class="contact">
+        <button id="contact-btn">CONTACT US</button>
+        <nav id="contact-nav" class="hidden">
+          <ul>
+            <li><a href="mailto:ourladyoffatimaparish.oad@gmail.com" style="font-size: smaller;">Email: ourladyoffatimaparish.oad@gmail.com </a></li>
+            <li><a href="https://www.facebook.com/OurLadyOfFatimaParishOAD" target="_blank">Facebook</a></li>
+            <li><a href="tel:287248634">Phone Number:287248634 </a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    
+  </footer>
+
+  <script>
+    const contactBtn = document.getElementById('contact-btn');
+    const contactNav = document.getElementById('contact-nav');
+
+    contactBtn.addEventListener('click', () => {
+      contactNav.classList.toggle('hidden');
+    });
+
+    const parishToggle = document.getElementById('parish-toggle');
+    const parishNav = document.getElementById('parish-nav');
+
+    parishToggle.addEventListener('click', () => {
+    parishNav.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
+
