@@ -41,6 +41,7 @@ body {
   font-size: 40px;
   font-weight: bold;
 }
+
 hr {
   border: none;
   border-top: 10px solid rgba(0, 0, 0, 1);
@@ -121,7 +122,7 @@ hr {
          body {
             margin: 0;
             font-family: "Baskerville", serif;
-            background-color: rgb(83, 198, 214);
+            background-image: linear-gradient(to top, rgb(190, 190, 190), rgb(255, 255, 255)); /*changed*/
         }
 
 .section-title {
@@ -136,6 +137,13 @@ hr {
   flex-basis: 100%; 
   font-weight: bold;
   font-size: 40px;
+}
+
+/*added*/
+.section-title h3{
+  flex-basis: 100%; 
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .section-title p {
@@ -192,12 +200,23 @@ footer {
   flex-wrap: wrap;
 }
 
+/*added*/
+.logos{
+  margin-left: 15px;
+}
+
+/*changed*/
 .logos img {
  height: 90px;
   width: 90px;
-  margin-right: 10px;
   border-radius: 50%; 
   align-items: center;
+}
+
+/*added*/
+.parish-name {
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .parish-name h3 {
@@ -224,7 +243,7 @@ footer {
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
-  margin-right: 60px;
+  margin-right: 10px; /*changed*/
   width: 220px; 
 }
 
@@ -274,7 +293,7 @@ footer {
     }
 
     .nav-links ul {
-        flex-direction: column;
+        flex-direction: row; /*changed*/
         gap: 10px;
     }
 
@@ -282,16 +301,49 @@ footer {
         padding: 0 10px;
     }
 
+   /*added*/
+    .section-title h3 {
+  flex-basis: 100%; 
+  font-weight: bold;
+  font-size: 25px;
+    }
+  
     .gallery {
     gap: 10px;
     }
 
-    .message {
-    font-size: 15px;
-    text-align: justify;      
-    max-width: 800px;         
-    margin: 0 auto;           
+       /*added*/
+.footer-content {
+    flex-direction: column;  
+    align-items: center;      
+    text-align: center;       
   }
+
+  /*added*/
+  .footer-content img {
+    margin: 5px 0px;            
+  }
+
+  /*added*/
+  .contact {  
+    margin-top: 10px;
+  }
+
+  /*added*/
+.parish-name {
+  margin-right: 0px;
+}
+
+/*added*/
+.logos{
+  margin-left: 0px;
+}
+
+  /*added*/ /*changed*/ 
+ #contact-btn {
+    margin-right: 0px;
+    margin-bottom: 10px;
+}   /*.message is removed*/         
 }
 
 
@@ -307,16 +359,45 @@ footer {
         font-size: 20px;
     }
 
+    /*added*/
+    .logo-section img{
+    height: 60px;
+    width: 60px;
+    }
+  
     .nav-links ul {
         flex-direction: row; 
         flex-wrap: wrap;     
-        justify-content: flex-end;
+        justify-content: center; /*changed*/
     }
 
   .nav-links li {
       margin-left: 10px;
-      font-size: 15px;
+      font-size: 10px; /*changed*/
+      justify-content: space-evenly; /*changed*/
   }
+
+   /*added*/
+.section-title h2{
+  flex-basis: 100%; 
+  font-weight: bold;
+  font-size: 20px;
+}
+
+  /*added*/
+.section-title h3{
+  flex-basis: 100%; 
+  font-weight: bold;
+  font-size: 17px;
+}
+
+  /*added*/
+.section-title p {
+  flex: 1; 
+  min-width: 250px; 
+  margin: 0;
+  font-size: 15px;
+} 
 
   .message {
     font-size: 15px;        
@@ -328,6 +409,54 @@ footer {
     .gallery {
     grid-template-columns: 1fr;  
     }
+  
+  /*added*/
+  .footer-content{
+    flex-direction: column;   
+    flex-wrap: wrap;     
+    padding: 10px;  
+    place-items: center;
+    }
+
+  /*added*/
+  .footer-content h3 {
+    font-size: 1rem;        
+  }
+
+  /*added*/
+  .footer-content p {
+    font-size: 0.8rem;
+  }
+
+  /*added*/
+  .footer-content{
+    flex-direction: column;  
+    flex-wrap: wrap;     
+    padding: 10px; 
+    place-items: center;
+    }
+
+  /*added*/
+  .footer-content h3 {
+    font-size: 1rem;        
+  }
+
+  /*added*/
+  .footer-content p {
+    font-size: 0.8rem;
+  }
+
+  /*added*/
+  .logos img {
+    margin-right: 0px; 
+    height: 60px;
+    width: 60px;
+  }
+  .logos img {
+    margin-right: 0px; 
+    height: 60px;
+    width: 60px;
+  }
 }
 
 /*queries queries queries*/
