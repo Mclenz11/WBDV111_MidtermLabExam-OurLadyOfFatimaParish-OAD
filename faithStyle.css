@@ -153,6 +153,10 @@ body {
     text-align: center;
 }
 
+.card{
+  margin: 10px;
+}
+
 .gallery-item {
   flex: 1;                
   background-color: #ddd;  
