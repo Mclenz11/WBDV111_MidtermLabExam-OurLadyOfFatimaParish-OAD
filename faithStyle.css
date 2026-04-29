@@ -41,6 +41,7 @@ body {
   font-size: 40px;
   font-weight: bold;
 }
+
 hr {
   border: none;
   border-top: 10px solid rgba(0, 0, 0, 1);
@@ -118,9 +119,15 @@ hr {
 
 /*content content content*/
 
+/*added*/
+body {
+  background-image: linear-gradient(to top, rgb(190, 190, 190), rgb(255, 255, 255)); /*changed*/ 
+} 
+
+/*changed*/
 .content {
-  background-color: rgb(83, 198, 214);
   text-align: center;
+  margin: 0px 10px;
 }
 
 .gallery {
@@ -140,7 +147,7 @@ hr {
 }
 
 .card-body {
-    background-color: rgb(83, 198, 214);
+    background-color: rgb(255, 255, 255; /*changed*/
     color: #000000;
     padding: 15px;
     text-align: center;
@@ -179,12 +186,23 @@ footer {
   flex-wrap: wrap;
 }
 
+/*added*/
+.logos{
+  margin-left: 15px;
+}
+
+/*changed*/
 .logos img {
  height: 90px;
   width: 90px;
-  margin-right: 10px;
   border-radius: 50%; 
   align-items: center;
+}
+
+/*added*/
+.parish-name {
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .parish-name h3 {
@@ -211,7 +229,7 @@ footer {
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
-  margin-right: 60px;
+  margin-right: 10px; /*changed*/
   width: 220px; 
 }
 
@@ -265,7 +283,7 @@ footer {
   }
 
   .nav-links ul {
-    flex-direction: column;
+    flex-direction: row; /*changed*/
     gap: 10px;
   }
 
@@ -290,8 +308,25 @@ footer {
     margin: 5px 0;           
   }
 
-  .parish-name, .contact {
+  /*changed*/
+  .contact { 
     margin-top: 10px;
+  }
+
+  /*added*/
+.parish-name {
+  margin-right: 0px;
+}
+
+/*added*/
+.logos{
+  margin-left: 0px;
+}
+
+  /*added*/  
+  #contact-btn {
+    margin-right: 0px;
+    margin-bottom: 10px;
   }
 
   
@@ -309,15 +344,22 @@ footer {
     font-size: 20px;
   }
 
+  /*added*/
+    .logo-section img{
+    height: 60px;
+    width: 60px;
+    }
+  
   .nav-links ul {
     flex-direction: row; 
     flex-wrap: wrap;     
-    justify-content: flex-end;
+    justify-content: center; /*changed*/
   }
 
   .nav-links li {
     margin-left: 10px;
-    font-size: 15px;
+    font-size: 10px; /*changed*/
+    justify-content: space-evenly; /*changed*/
   }
   
   body {
@@ -358,9 +400,9 @@ footer {
   }
 
   .footer-content{
-    flex-direction: row; 
+    flex-direction: column; /*changed*/ 
     flex-wrap: wrap;     
-    padding: 20px;
+    padding: 10px; /*changed*/
     place-items: center;
     }
     
@@ -370,6 +412,13 @@ footer {
 
   .footer-content p {
     font-size: 0.8rem;
+  }
+
+  /*added*/
+  .logos img {
+    margin-right: 0px; 
+    height: 60px;
+    width: 60px;
   }
 }
 
