@@ -147,8 +147,8 @@ hr {
 .content {
   width: 100%;  
   max-width: 1600px;
-  margin: 0 auto;     
-  padding: 5px;
+  margin: 7px auto; /*changed*/     
+  padding: 7px; /*changed*/
   display: block;
 }
 
@@ -170,8 +170,9 @@ section img {
 }
 
 body {
-  background-color: rgb(83, 198, 214);
+  background-image: linear-gradient(to top, rgb(190, 190, 190), rgb(255, 255, 255)); /*changed*/
 }
+
 .content h2{
     font-family: "Libre Baskerville", sans-serif;
     font-weight: bold;
@@ -193,18 +194,18 @@ body {
   position: relative;
   width: 100%;
   min-height: 500px;
-  margin-top: 0px;  
-  margin-bottom: 0px;
+  margin: 0px; /*changed*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 5px; /*added*/
   padding-bottom: 5px;
 }
 
 .background-img {
-  width: 200px;
-  height: 200px;
+  width: 100%; /*changed*/
+  height: 100%; /*changed*/
   object-fit: cover;
   display: block;
 }
@@ -212,7 +213,7 @@ body {
 .schedule-box {
   position: absolute;
   background: rgba(242, 197, 51, 0.85); 
-  padding: 20px 30px;
+  padding: 5px 20px 15px 20px; /*changed*/
   border-radius: 8px;
   text-align: center;
   max-width: 600px;
@@ -222,7 +223,7 @@ body {
 }
 
 .schedule-box h2 {
-  margin-bottom: 20px;
+  margin-bottom: 15px; /*changed*/
   font-size: 1.8rem;
   font-weight: bold;
 }
@@ -262,8 +263,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 500px;
-  margin-top: 5px;  
-  margin-bottom: 5px;
+  margin: 10px 0px; /*changed*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -276,8 +276,8 @@ body {
   flex: 1 1 200px; 
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   background: rgba(115, 133, 236, 0.9);
-  gap: 20px;
-  padding: 0px;
+  gap: 0px;
+  padding: 0px 10px; /*changed*/
   border-radius: 8px;
   border-width: 10px;
   top: 50%;
@@ -314,12 +314,22 @@ footer {
   flex-wrap: wrap;
 }
 
+/*added*/
+.logos{
+  margin-left: 15px;
+}
+
 .logos img {
- height: 90px;
+  height: 90px;
   width: 90px;
-  margin-right: 10px;
   border-radius: 50%; 
   align-items: center;
+}
+
+/*added*/
+.parish-name {
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .parish-name h3 {
@@ -346,7 +356,7 @@ footer {
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
-  margin-right: 60px;
+  margin-right: 10px; /*changed*/
   width: 220px; 
 }
 
@@ -375,6 +385,7 @@ footer {
   background-color: #3F51B5;
   color: #fff;
 }
+
 .hidden {
   display: none;
 }
@@ -398,7 +409,7 @@ footer {
   }
 
   .nav-links ul {
-    flex-direction: column;
+    flex-direction: row; /*changed*/
     gap: 10px;
   }
 
@@ -442,8 +453,24 @@ footer {
     margin: 5px 0;           
   }
 
-  .parish-name, .contact {
+  .contact { /*changed*/
     margin-top: 10px;
+  }
+   
+  /*added*/
+.parish-name {
+  margin-right: 0px;
+}
+
+/*added*/
+.logos{
+  margin-left: 0px;
+}
+
+  /*added*/ 
+  #contact-btn {
+    margin-right: 0px;
+    margin-bottom: 10px;
   }
     
 }
@@ -461,20 +488,44 @@ footer {
     font-size: 20px;
   }
 
+  /*added*/
+  .logo-section img{
+    height: 60px;
+    width: 60px;
+  }
+  
   .nav-links ul {
     flex-direction: row; 
     flex-wrap: wrap;     
-    justify-content: flex-end;
+    justify-content: center; /*changed*/
   }
 
   .nav-links li {
     margin-left: 10px;
-    font-size: 15px;
+    font-size: 10px; /*changed*/
+    justify-content: space-evenly; /*added*/
   }
 
-  p {
-    font-size: 0.95rem;
+  /*added*/
+  .welcome h2{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 0;
   }
+ 
+  /*added*/
+  .welcome p{
+    font-size: 15px;
+    text-align: center;
+  } 
+
+  /*added*/
+   .content h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  } 
+
+  /*removed p*/
 
   .schedule-box h2 {
     font-size: 1.2rem;
@@ -508,9 +559,9 @@ footer {
   }
 
   .footer-content{
-    flex-direction: row; 
+    flex-direction: column; /*changed*/ 
     flex-wrap: wrap;     
-    padding: 20px;
+    padding: 10px; /*changed*/
     place-items: center;
     }
     
@@ -520,6 +571,13 @@ footer {
 
   .footer-content p {
     font-size: 0.8rem;
+  }
+
+  /*added*/
+  .logos img {
+    margin-right: 0px; 
+    height: 60px;
+    width: 60px;
   }
 
 }
