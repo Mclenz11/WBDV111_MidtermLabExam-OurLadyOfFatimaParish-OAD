@@ -47,6 +47,7 @@ body {
   font-size: 40px;
   font-weight: bold;
 }
+
 hr {
   border: none;
   border-top: 10px solid rgba(0, 0, 0, 1);
@@ -133,7 +134,7 @@ body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: rgb(83, 198, 214);
+      background-color: rgb(255, 255, 255); /*changed*/
     }
 
     .grid-container {
@@ -142,12 +143,21 @@ body {
       gap: 20px;
     }
 
+    /*added*/
+    main h1 {
+      text-align: center;
+      margin: 20px 0;
+      font-family: "Libre Baskerville", serif;
+      font-weight: bolder;
+    }
+
     .tile {
-      background-color: #fff;
+      background-image: linear-gradient(to top, rgb(190, 190, 190), rgb(255, 255, 255)); /*changed*/
       border: 1px solid #ddd;
       border-radius: 8px;
       overflow: hidden;
       transition: transform 0.2s ease;
+      margin: 10px 15px; /*added*/
     }
 
     .tile img {
@@ -184,12 +194,23 @@ body {
   flex-wrap: wrap;
 }
 
+/*added*/
+.logos{
+  margin-left: 15px;
+}
+
+/*changed*/
 .logos img {
  height: 90px;
   width: 90px;
-  margin-right: 10px;
   border-radius: 50%; 
   align-items: center;
+}
+
+/*added*/
+.parish-name {
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .parish-name h3 {
@@ -216,7 +237,7 @@ body {
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
-  margin-right: 60px;
+  margin-right: 10px; /*changed*/
   width: 220px; 
 }
 
@@ -245,6 +266,7 @@ body {
   background-color: #3F51B5;
   color: #fff;
 }
+
 .hidden {
   display: none;
 }
@@ -268,7 +290,7 @@ body {
   }
 
   .nav-links ul {
-    flex-direction: column;
+    flex-direction: row; /*changed*/
     gap: 10px;
   }
 
@@ -282,8 +304,25 @@ body {
     margin: 5px 0;           
   }
 
-  .parish-name, .contact {
+  /*changed*/
+  .contact { 
     margin-top: 10px;
+  }
+
+  /*added*/
+.parish-name {
+  margin-right: 0px;
+}
+
+/*added*/
+.logos{
+  margin-left: 0px;
+}
+
+  /*added*/  
+  #contact-btn {
+    margin-right: 0px;
+    margin-bottom: 10px;
   }
 }
 
@@ -299,15 +338,22 @@ body {
     font-size: 20px;
   }
 
+  /*added*/
+    .logo-section img{
+    height: 60px;
+    width: 60px;
+    }
+  
   .nav-links ul {
     flex-direction: row; 
     flex-wrap: wrap;     
-    justify-content: flex-end;
+    justify-content: center; /*changed*/
   }
 
   .nav-links li {
     margin-left: 10px;
-    font-size: 15px;
+    font-size: 10px; /*changed*/
+    justify-content: space-evenly; /*added*/
   }
 
   .tile img{
@@ -315,9 +361,9 @@ body {
   }
 
   .footer-content{
-    flex-direction: row; 
+    flex-direction: column; /*changed*/ 
     flex-wrap: wrap;     
-    padding: 20px;
+    padding: 10px; /*changed*/
     place-items: center;
     }
     
@@ -327,6 +373,13 @@ body {
 
   .footer-content p {
     font-size: 0.8rem;
+  }
+
+  /*changed*/
+  .logos img {
+    margin-right: 0px; 
+    height: 60px;
+    width: 60px;
   }
 }
 
