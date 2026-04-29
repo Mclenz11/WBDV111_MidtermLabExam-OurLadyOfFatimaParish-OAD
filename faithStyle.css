@@ -135,7 +135,6 @@ body {
   justify-content: center;
   gap: 20px;              
   padding: 20px 5%;
-  max-width: 1200px;
   margin: 0 auto;          
 }
 
@@ -424,6 +423,99 @@ footer {
     margin-right: 0px; 
     height: 60px;
     width: 60px;
+  }
+}
+
+@media (min-width: 2000px) {
+
+  body {
+    font-size: 30px;               
+    line-height: 1.8;              
+  }
+
+  .logo-section img{
+    height: 120px;               
+    width: 120px;
+  }
+
+   .nav-links ul {
+    gap: 50px;                     
+  }
+
+  .site-header .logo-section h1 {
+    font-size: 50px;              
+  }
+
+  .nav-links ul {
+    gap: 35px;                     
+  }
+
+
+  .gallery-item img {
+    gap: 40px;
+    width: 600px;
+    height: 500px;
+  }
+
+  .history-section {
+    max-width: 1400px;
+    margin: 60px auto;
+    font-size: 1.3rem;
+  }
+
+  .history-section h2 {
+    font-size: 45px;             
+  }
+
+  .history-section p{
+    font-size: 35px;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .card-header{
+    font-size: 40px;
+  }
+
+  .card-body {
+    padding: 30px;
+    font-size: 35px;
+    border-radius: 10px;
+  }
+
+  .significance {
+    max-width: 1200px;
+    margin: 60px auto;
+    font-size: 1.2rem;
+  }
+
+  .footer-content {
+    max-width: 1600px;            
+    margin: 0 auto;
+  }
+
+  .logos img{
+    height: 120px;               
+    width: 120px;
+  }
+
+  .parish-name h3 {
+    font-size: 40px;               
+  }
+
+  .small-text .rights {
+    font-size: 30px;               
+  }
+
+  #contact-btn {
+    padding: 20px 40px;            
+    font-size: 30px;
+    width: 300px;             
   }
 }
 
