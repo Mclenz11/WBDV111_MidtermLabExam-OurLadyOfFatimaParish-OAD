@@ -416,6 +416,91 @@ footer {
     height: 60px;
     width: 60px;
   }
+
+  @media (min-width: 2000px) {
+
+  body {
+    font-size: 30px;               
+    line-height: 1.8;              
+  }
+
+  .logo-section img{
+    height: 120px;               
+    width: 120px;
+  }
+
+   .nav-links ul {
+    gap: 50px;                     
+  }
+  .site-header .logo-section h1 {
+    font-size: 50px;              
+  }
+
+  .nav-links ul {
+    gap: 35px;                     
+  }
+
+  .main-container {
+    min-width: 2010px;
+    margin: 0 auto;    
+    padding: 20px;     
+  }
+
+  .image-banner img{
+    gap: 40px;
+    width: 600px;
+    height: 500px;                    
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    min-width: 2010px;
+  }
+
+  .section-title h2 {
+    font-size: 45px;             
+  }
+
+  .section-title p {
+    font-size: 35px;             
+  }
+
+
+  .card h3 {
+    font-size: 40px;             
+  }
+
+
+  .card p,li {
+    font-size: 35px;
+  }
+
+   .footer-content {
+    max-width: 1600px;            
+    margin: 0 auto;
+  }
+
+  .logos img{
+    height: 120px;               
+    width: 120px;
+  }
+
+  .parish-name h3 {
+    font-size: 40px;               
+  }
+
+  .small-text .rights {
+    font-size: 30px;               
+  }
+
+  #contact-btn {
+    padding: 20px 40px;            
+    font-size: 30px;
+    width: 300px;             
+  }
+}
     
 }
 
