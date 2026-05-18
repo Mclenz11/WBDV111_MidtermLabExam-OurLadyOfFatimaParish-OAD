@@ -263,7 +263,7 @@ body {
 }
  /*content content content*/
 
- /*FOOTER FOOTER FOOTER*/
+/*FOOTER FOOTER FOOTER*/
 footer {
   background: #3F51B5;
   text-align: center;
@@ -332,7 +332,7 @@ footer {
   padding: 10px;
   width: 260px;
   z-index: 9999;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(89, 15, 248, 0.3);
 }
 
 #contact-nav ul {
@@ -533,6 +533,34 @@ body, header, main, section, footer, img, .tile {
 main h2{
   padding-top: 50px;
 }
+
+  /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
+.footer-content {
+  flex-direction: column;  
+  align-items: center;      
+  text-align: center;       
+}
+
+.footer-content img {
+  margin: 5px 0px;          
+}
+
+.contact { 
+  margin-top: 10px;
+}
+   
+.parish-name {
+  margin-right: 0px;
+}
+
+.logos{
+  margin-left: 0px;
+}
+
+#contact-btn {
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
 }
 
 @media (max-width: 480px) {
@@ -572,6 +600,26 @@ main h2{
     padding: 10px;
   }
 
+  .footer-content{
+    flex-direction: column; 
+    flex-wrap: wrap;     
+    padding: 10px; 
+    place-items: center;
+    }
+    
+  .footer-content h3 {
+    font-size: 1rem;        
+  }
+
+  .footer-content p {
+    font-size: 0.8rem;
+  }
+
+  .logos img {
+    margin-right: 0px; 
+    height: 60px;
+    width: 60px;
+  }
  
 }
 
@@ -627,7 +675,30 @@ main h2{
     text-align: center;
     margin-top: 15px;
   }
+/*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
+  .footer-content {
+    max-width: 1600px;             
+    margin: 0 auto;
+  }
 
+  .logos img{
+    height: 120px;             
+    width: 120px;
+  }
+
+  .parish-name h3 {
+    font-size: 40px;              
+  }
+
+  .small-text .rights {
+    font-size: 30px;           
+  }
+
+  #contact-btn {
+    padding: 20px 40px;            
+    font-size: 30px;
+    width: 300px;            
+  }
    
 }
 
