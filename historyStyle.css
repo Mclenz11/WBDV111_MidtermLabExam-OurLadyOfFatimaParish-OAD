@@ -642,7 +642,7 @@ footer {
 
 body.dark-mode {
   background-color: #121212 !important;
-  background-image: none !important; /* FIXED: Overrides light-mode gradient */
+  background-image: none !important; 
   color: #e0e0e0;
 }
 
