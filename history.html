@@ -12,11 +12,10 @@
     <title>Our Lady of Fatima Parish-OAD - History Page</title>
 </head>
 <body>
-    <header class="site-header">
+<header class="site-header">
     <div class="logo-section">
-        <img src="./images/OLFP with bg.png" alt="Our Lady of Fatima Parish-OAD Logo">
-        <img src="./images/DOF no BG.png" alt="Diocese of Antipolo Logo">
-        <h1>OUR LADY OF FATIMA PARISH-OAD</h1>
+      <img src="./images/OLFP with bg.png" alt="Our Lady of Fatima Parish-OAD Logo">
+      <img src="./images/DOF no BG.png" alt="Diocese of Antipolo Logo">
     </div>
     <nav class="nav-links">
       <ul>
@@ -34,11 +33,12 @@
         <li><a href="./donation.html">DONATION</a></li>
       </ul>
     </nav>
-  </header>
+  <button id="darkModeToggle">🌙</button>
+</header>
 
   <div class="image-banner">
     <img src="./images/1.png" alt="Picture of the Church Front Facade">
-    <img src="./images/2.png" alt="Picture of the Church Altar">
+    <img src=".\images\2.JPG" alt="Picture of the Church Altar">
 
 </div>
 
@@ -101,7 +101,7 @@
 
     </div>
 
-    <div class="section-title mt-5">
+    <div class="section-title">
         <h2>Timeline</h2>
     </div>
 
@@ -194,48 +194,123 @@
     </div>
 
 </main>
+<footer>
 
-  <footer>
     <div class="footer-content">
-      <div class="logos">
-        <img src="./images/OLFP with bg.png" alt="Our Lady of Fatima Parish-OAD Logo">
-        <img src="./images/DOF no BG.png" alt="Diocese of Antipolo Logo">
-      </div>
-      <div class="parish-name">
-        <h3>OUR LADY OF FATIMA PARISH-OAD</h3>
-        <p class="small-text">
-          Our Lady of Fatima Parish-OAD, Sitio Capatagan, Pinugay road, San Jose, Antipolo City.
-        </p>
-        <p class="rights">ALL RIGHTS RESERVED 2026</p>
-      </div>
-      <div class="contact">
-        <button id="contact-btn">CONTACT US</button>
-        <nav id="contact-nav" class="hidden">
-          <ul>
-            <li><a href="mailto:ourladyoffatimaparish.oad@gmail.com" style="font-size: smaller;">Email: ourladyoffatimaparish.oad@gmail.com </a></li>
-            <li><a href="https://www.facebook.com/OurLadyOfFatimaParishOAD" target="_blank">Facebook</a></li>
-            <li><a href="tel:287248634">Phone Number:287248634 </a></li>
-          </ul>
-        </nav>
-      </div>
+
+        <div class="logos">
+            <img src="./images/OLFP with bg.png" alt="Our Lady of Fatima Parish-OAD Logo">
+            <img src="./images/DOF no BG.png" alt="Diocese of Antipolo Logo">
+        </div>
+
+        <div class="parish-name">
+
+            <h3>OUR LADY OF FATIMA PARISH-OAD</h3>
+
+            <p class="small-text">
+                Our Lady of Fatima Parish-OAD, Sitio Capatagan,
+                Pinugay Road, San Jose, Antipolo City.
+            </p>
+
+            <p class="rights">ALL RIGHTS RESERVED 2026</p>
+
+        </div>
+
+        <div class="contact">
+
+            <button id="contact-btn">CONTACT US</button>
+
+            <nav id="contact-nav" class="hidden">
+                <ul>
+                    <li>
+                        <a href="mailto:ourladyoffatimaparish.oad@gmail.com">
+                            Email: ourladyoffatimaparish.oad@gmail.com
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/OurLadyOfFatimaParishOAD" target="_blank">
+                            Facebook
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tel:287248634">
+                            Phone Number: 287248634
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
     </div>
-    
-  </footer>
+
+</footer>
 
   <script>
-    const contactBtn = document.getElementById('contact-btn');
-    const contactNav = document.getElementById('contact-nav');
 
-    contactBtn.addEventListener('click', () => {
-      contactNav.classList.toggle('hidden');
-    });
-
+  //Parish toggle button
     const parishToggle = document.getElementById('parish-toggle');
     const parishNav = document.getElementById('parish-nav');
 
-    parishToggle.addEventListener('click', () => {
-    parishNav.classList.toggle('hidden');
+    parishToggle.addEventListener("click", function(event) {
+      parishNav.classList.toggle("hidden");
+      event.stopPropagation();
+
+    document.addEventListener("click", function(event) {
+    if (!parishNav.classList.contains("hidden")) {
+      if (!parishNav.contains(event.target) && event.target !== parishToggle) {
+        parishNav.classList.add("hidden");
+      }
+    }
+  });
+});
+
+    //Contact toggle button
+    const contactBtn = document.getElementById('contact-btn');
+    const contactNav = document.getElementById('contact-nav');
+
+    contactBtn.addEventListener("click", function(event) {
+      contactNav.classList.toggle("hidden");
+      event.stopPropagation();
+
+      document.addEventListener("click", function(event) {
+      if (!contactNav.classList.contains("hidden")) {
+      if (!contactNav.contains(event.target) && event.target !== contactBtn) {
+        contactNav.classList.add("hidden");
+      }
+    }
+    }); 
+  });
+ 
+ const toggleBtn = document.getElementById("darkModeToggle");
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        toggleBtn.textContent = "☀️";
+    } else {
+        toggleBtn.textContent = "🌙";
+    
+    }
+});             
+// Back to Top button
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
     });
+
+    backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
   </script>
-</body>
+ </body>
 </html>
