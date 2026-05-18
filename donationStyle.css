@@ -595,10 +595,6 @@ body, header, section, footer, img {
 
 /*CONTENT CONTENT CONTENT*/
 
-.section-title{
-  padding-top: 30px;
-}
-
 .section-title h2{
   flex-basis: 100%; 
   font-weight: bold;
