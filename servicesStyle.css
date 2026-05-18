@@ -174,12 +174,6 @@ hr {
   cursor: pointer;
 }
 
-/* =========================================================
-   3. MAIN CONTENT
-========================================================= */
-
-/* IMAGE BANNER */
-
 .image-banner {
   display: flex;
   justify-content: center;
@@ -202,16 +196,12 @@ hr {
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
-/* MAIN CONTAINER */
-
 .main-container {
   max-width: 1100px;
   margin: 20px auto;
   padding: 0 20px;
   text-align: center;
 }
-
-/* SECTION TITLE */
 
 .section-title {
   margin-bottom: 30px;
@@ -223,19 +213,12 @@ hr {
   font-weight: bold;
 }
 
-/* SERVICES GRID */
-
 .services-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   text-align: left;
 }
-
-
-/* =========================================================
-   4. CARDS
-========================================================= */
 
 .card {
   background: white;
@@ -270,11 +253,6 @@ hr {
   padding-left: 20px;
   margin: 0;
 }
-
-
-/* =========================================================
-   5. FOOTER
-========================================================= */
 
 /*FOOTER FOOTER FOOTER*/
 footer {
@@ -393,11 +371,6 @@ footer {
 
 /*FOOTER FOOTER FOOTER*/
 
-
-/* =========================================================
-   6. BUTTONS
-========================================================= */
-
 /* DARK MODE BUTTON */
 
 .dark-btn {
@@ -414,8 +387,6 @@ footer {
 .dark-btn:hover {
   background-color: #444;
 }
-
-/* BACK TO TOP BUTTON */
 
 #backToTop {
   position: fixed;
@@ -437,11 +408,7 @@ footer {
   background-color: #2980b9;
 }
 
-
-/* =========================================================
-   7. DARK MODE
-========================================================= */
-
+/*DARK MODE*/
 /*header header header*/
 body.dark-mode {
   background-color: #121212;
@@ -505,10 +472,6 @@ body.dark-mode #contact-nav {
   padding: 5px;
 }
 
-
-
-/* CARDS */
-
 body.dark-mode .card {
   background-color: #1f1f1f !important;
   border: 1px solid #333 !important;
@@ -527,8 +490,6 @@ body.dark-mode .card-body {
   background-color: #1f1f1f !important;
   color: white !important;
 }
-
-/* TEXT */
 
 body.dark-mode h1,
 body.dark-mode h2,
@@ -561,19 +522,11 @@ body, header, section, footer {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* HR */
-
 body.dark-mode hr {
   border-top: 10px solid white !important;
 }
 
-
-/* =========================================================
-   8. RESPONSIVE DESIGN
-========================================================= */
-
-/* TABLETS */
-
+/*quearies queries queries*/
 @media (max-width: 768px) {
 
   .site-header {
@@ -645,8 +598,6 @@ body.dark-mode hr {
 }
 }
 
-/* MOBILE */
-
 @media (max-width: 480px) {
 
  .site-header { 
@@ -697,15 +648,13 @@ body.dark-mode hr {
   }
 }
 
-/* ULTRA WIDE SCREENS */
-
 @media (min-width: 2000px) {
 
    body {
     font-size: 30px;              
     line-height: 1.8;            
   }
-  /*header header */
+
   .logo-section img{
     height: 120px;             
     width: 120px;
