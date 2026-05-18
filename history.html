@@ -131,7 +131,7 @@
                 <ul>
                         <li>The San Alberto Multi-purpose Center was built which served as a church. Under the leadership of Rev. Fr. Leo Schmitt, SVD.</li>
                     <ul>        
-                <li><strong>Patuloy na nagmimisa ang mga kasamahan niyang pari:</strong>
+                <li><strong>Continued helding mass with other Priest:</strong>
                         <li>Rev. Fr. Rhing Malbog, SVD</li>
                         <li>Rev. Fr. Bong Cometa, SVD</li>
                         <li>Rev. Fr. Adam MacDonald, SVD</li>
@@ -151,7 +151,7 @@
                    <ul><li><strong>Under the leadership:</strong></li>
                       <li>Rev.Fr.Peter Fancubila,OSJ</li>
                       <li>Rev.Fr.Ray Sales, OSJ</li>
-                   <li>Sila ay mula sa Parokya ng St.Anthony Of Padua,Inirawan,Antipolo City.</li>
+                   <li>They are from the Parish of St.Anthony Of Padua,Inirawan,Antipolo City.</li>
                    </ul>
                 </ul>
             </div>
@@ -272,18 +272,21 @@
     }); 
   });
  
- const toggleBtn = document.getElementById("darkModeToggle");
+ //Dark Mode Toggle
+    const toggleBtn = document.getElementById("darkModeToggle");
 
-toggleBtn.addEventListener("click", () => {
+      if (localStorage.getItem('darkMode') === 'enabled') {
+  document.body.classList.add('dark-mode');
+}
+    toggleBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
 
     if(document.body.classList.contains("dark-mode")){
-        toggleBtn.textContent = "☀️";
+      toggleBtn.textContent = "☀️";
     } else {
-        toggleBtn.textContent = "🌙";
-    
+      toggleBtn.textContent = "🌙";
     }
-});             
+});      
 // Back to Top button
     const backToTopBtn = document.getElementById("backToTop");
 
