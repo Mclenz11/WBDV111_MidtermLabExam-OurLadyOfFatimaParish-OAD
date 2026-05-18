@@ -14,6 +14,11 @@ body {
 
 .site-header {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   justify-content: space-between;
   align-items: center;
   background-color: #3F51B5;
@@ -28,18 +33,11 @@ body {
 }
 
 .logo-section img {
-  height: 90px;
-  width: 90px;
+  height: 60px;
+  width: 60px;
   margin-right: 10px;
   border-radius: 50%; 
   
-}
-
-.logo-section h1 {
-  margin: 0;
-  font-family: "Libre Baskerville", serif;
-  font-size: 40px;
-  font-weight: bold;
 }
 
 hr {
@@ -60,9 +58,29 @@ hr {
 }
 
 .nav-links a {
+  position: relative;
   text-decoration: underline;
   color: black;
   font-weight: bold;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .parish-info {
@@ -71,12 +89,31 @@ hr {
 }
 
 #parish-toggle {
+  position: relative;
   color: #000000;
   text-decoration: underline;  
   cursor: pointer;
   font-weight: bold;
   display: inline-block;           
   text-align: center;
+}
+
+#parish-toggle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(248, 248, 246);
+  transition: width 0.3s ease;
+}
+
+#parish-toggle:hover {
+  color: rgb(255, 255, 255) !important; 
+}
+#parish-toggle:hover::after {
+  width: 100%;
 }
 
 #parish-nav {
@@ -115,16 +152,36 @@ hr {
   text-decoration: none;
 }
 
+#parish-nav {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.parish-info:hover #parish-nav {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#darkModeToggle {
+  font-size: 24px;        
+  padding: 10px 14px;     
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+}
  /*Header Header Header*/
 
+
 /*content content content*/
-
-/*added*/
 body {
-  background-image: linear-gradient(to top, rgb(190, 190, 190), rgb(255, 255, 255)); /*changed*/ 
-} 
+  background-image: linear-gradient(to top, rgb(190, 190, 190), rgb(255, 255, 255));
+  padding-top: 100px;
+}
 
-/*changed*/
 .content {
   text-align: center;
   margin: 0px 10px;
@@ -133,48 +190,75 @@ body {
 .gallery {
   display: flex;
   justify-content: center;
-  gap: 20px;              
+  gap: 20px;
   padding: 20px 5%;
-  margin: 0 auto;          
+  margin: 0 auto;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
-.card-header{
-    background-color: #3498db;
-    color:#000000;
-    font-weight: bold;
-    padding: 10px;
+.card-header {
+  background-color: #3498db;
+  color: #000000;
+  font-weight: bold;
+  padding: 10px;
 }
 
 .card-body {
-    background-color: rgb(255, 255, 255); /*changed*/
-    color: #000000;
-    padding: 15px;
-    text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  padding: 15px;
+  text-align: center;
 }
 
-.card{
+.card {
   margin: 10px;
 }
 
 .gallery-item {
-  flex: 1;                
-  background-color: #ddd;  
-  border: 1px solid #ccc;  
-  overflow: hidden;        
-  aspect-ratio: 3 / 2;    
+  flex: 1 1 300px;
+  max-width: 500px;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .gallery-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;      
+  height: 300px;
+  object-fit: cover;
   display: block;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+.image-banner img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+#contact-btn:hover,
+#darkModeToggle:hover {
+  transform: scale(1.08);
+}
+
+#darkModeToggle {
+  background: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 18px;
+  position: Right;
 }
 
 /*content content content*/
 
-/*footer footer footer*/
-
+/*FOOTER FOOTER FOOTER*/
 footer {
   background: #3F51B5;
   text-align: center;
@@ -189,20 +273,17 @@ footer {
   flex-wrap: wrap;
 }
 
-/*added*/
-.logos{
+.logos {
   margin-left: 15px;
 }
 
-/*changed*/
 .logos img {
- height: 90px;
+  height: 90px;
   width: 90px;
-  border-radius: 50%; 
+  border-radius: 50%;
   align-items: center;
 }
 
-/*added*/
 .parish-name {
   margin-top: 10px;
   margin-right: 10px;
@@ -232,19 +313,21 @@ footer {
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
-  margin-right: 10px; /*changed*/
-  width: 220px; 
+  margin-right: 10px;
+  width: 220px;
 }
 
 #contact-nav {
   position: absolute;
-  bottom: 100%;
-  left: 0;
-  background-color: #fff;
-  color: #3F51B5;
-  border-radius: 5px;
-  padding: 5px;
-  width: 220px;
+  bottom: 110%;
+  right: 0;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 260px;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 #contact-nav ul {
@@ -253,8 +336,27 @@ footer {
   padding: 0;
 }
 
+#contact-nav li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#contact-nav li:last-child {
+  border-bottom: none;
+}
+
+#contact-nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
 #contact-nav li:hover {
-  border: 2px solid #000000;
+  background-color: #f1f1f1;
+  border-radius: 5px;
 }
 
 .nav-buttons li:hover {
@@ -271,100 +373,320 @@ footer {
   margin-bottom: 10px;
 }
 
-/*footer footer footer*/
+/*FOOTER FOOTER FOOTER*/
+
+/*DARK MODE FUNCTION */
+
+body.dark-mode {
+  background: #121212 !important;
+  background-image: none !important;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li,
+body.dark-mode a {
+  color: #e0e0e0;
+}
+
+/* HEADER + MAIN CONTENT + FOOTER */
+body.dark-mode .site-header,
+body.dark-mode .content,
+body.dark-mode footer {
+  background-color: #1f1f1f !important;
+}
+
+/* NAVIGATION LINKS */
+body.dark-mode .nav-links a {
+  color: #faf6f6 !important;
+}
+
+body.dark-mode .nav-links a:hover {
+  color: #4da3ff !important;
+}
+
+body.dark-mode .nav-links a:hover::after {
+  background-color: #4da3ff !important;
+  width: 100%;
+}
+
+/* PARISH TOGGLE */
+body.dark-mode #parish-toggle {
+  color: #ffffff;
+}
+
+body.dark-mode #parish-toggle:hover {
+  color: #4da3ff !important;
+}
+
+body.dark-mode #parish-toggle:hover::after {
+  background-color: #4da3ff !important;
+  width: 100%;
+}
+
+/* DROPDOWNS */
+body.dark-mode #parish-nav,
+body.dark-mode #contact-nav {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+body.dark-mode #parish-nav a,
+body.dark-mode #contact-nav a {
+  color: #e0e0e0;
+}
+
+body.dark-mode #parish-nav a:hover {
+  color: #ffffff;
+}
+
+/* CONTENT */
+body.dark-mode .section-title h2,
+body.dark-mode .card-body,
+body.dark-mode p,
+body.dark-mode li {
+  color: white !important;
+}
+
+/* CARDS */
+body.dark-mode .card {
+  background-color: #1f1f1f;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .card-body {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode .card-header {
+  background-color: #2563eb;
+  color: white !important;
+}
+
+body.dark-mode .card h3 {
+  background-color: #2563eb;
+  color: white !important;
+}
+
+/* GALLERY ITEMS */
+body.dark-mode .gallery-item {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+}
+
+/* BUTTONS */
+body.dark-mode .btn,
+body.dark-mode #contact-btn,
+body.dark-mode #darkModeToggle {
+  background-color: #3F51B5;
+  color: #fff;
+}
+
+body.dark-mode .btn:hover,
+body.dark-mode #contact-btn:hover {
+  background-color: #303F9F;
+}
+
+/* FOOTER */
+body.dark-mode footer {
+  background-color: #1f1f1f;
+}
+
+/* ERRORS */
+body.dark-mode .error {
+  color: #ff6b6b;
+}
+
+/* SMOOTH TRANSITIONS */
+body,
+header,
+section,
+footer,
+.site-header,
+.content,
+.card,
+.card-body,
+.gallery-item {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+/*header header header*/
+/* MAIN CONTENT */
+
+body.dark-mode .section-title h2,
+body.dark-mode .card-body,
+body.dark-mode p,
+body.dark-mode li {
+  color: white !important;
+}
+
+body.dark-mode .card {
+  background-color: #1f1f1f;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .card-body {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode .card-header {
+  background-color: #2563eb;
+  color: white !important;
+}
+
+body.dark-mode .card h3 {
+  background-color: #2563eb;
+  color: white !important;
+}
+
+/* FOOTER */
+body.dark-mode .btn,
+body.dark-mode #contact-btn,
+body.dark-mode #darkModeToggle {
+  background-color: #3F51B5;
+  color: #fff;
+}
+
+body.dark-mode footer{
+  background-color: #1f1f1f;
+}
+body.dark-mode .btn:hover,
+body.dark-mode #contact-btn:hover {
+  background-color: #303F9F;
+}
+
+body.dark-mode .error {
+  color: #ff6b6b;
+}
+
+body, header, section, footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 /*queries queries queries*/
 
 @media screen and (max-width: 768px) {
-  body {
-    font-size: 18px;
+  /*HEADER HEADER HEADER HEADER HEADER HEADER*/
+.site-header {
+  flex-direction: row;
+  text-align: center;
+  gap: 10px;
+}
+
+.site-header img {
+  height: 50px;
+  width: 50px;
+}
+
+.nav-links ul {
+  flex-direction: row; 
+  gap: 10px;
+}
+
+#darkModeToggle {
+    font-size: 12px;      
+    padding: 4px 6px;     
+    border-radius: 4px;   
   }
 
-  .site-header {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
+/*header header header*/
+/*content content*/
 
-  .nav-links ul {
-    flex-direction: row; /*changed*/
-    gap: 10px;
-  }
+ .gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 5%;
+  margin: 0 auto;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
 
-  .gallery {
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    padding: 25px 10px;
-  }
+.gallery-item {
+  flex: 1 1 300px;
+  max-width: 500px;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  border-radius: 12px;
+}
 
-  .gallery-item {
-    width: 95%;
-    max-width: 400px;
-  }
-    .footer-content {
-    flex-direction: column;  
-    align-items: center;      
-    text-align: center;       
-  }
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
 
-  .footer-content img {
-    margin: 5px 0;           
-  }
+/*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
+.footer-content {
+  flex-direction: column;  
+  align-items: center;      
+  text-align: center;       
+}
 
-  /*changed*/
-  .contact { 
-    margin-top: 10px;
-  }
+.footer-content img {
+  margin: 5px 0px;          
+}
 
-  /*added*/
+.contact { 
+  margin-top: 10px;
+}
+   
 .parish-name {
   margin-right: 0px;
 }
 
-/*added*/
 .logos{
   margin-left: 0px;
 }
 
-  /*added*/  
-  #contact-btn {
-    margin-right: 0px;
-    margin-bottom: 10px;
-  }
-
-  
+#contact-btn {
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
 }
 
-
 @media screen and (max-width: 480px) {
- .site-header {
+ /*HEADER HEADER HEADER HEADER HEADER HEADER*/
+  .site-header { 
+    display: flex;
+    justify-content: center;    
+    align-items: center;      
     flex-direction: row; 
     flex-wrap: wrap;     
-    padding: 10px 15px;
+    padding: 7px 7px;
   }
-
-  .logo-section h1 {
-    font-size: 20px;
-  }
-
-  /*added*/
-    .logo-section img{
-    height: 60px;
-    width: 60px;
-    }
   
-  .nav-links ul {
-    flex-direction: row; 
-    flex-wrap: wrap;     
-    justify-content: center; /*changed*/
+  .logo-section img{
+    height: 25px;
+    width: 25px;
   }
 
-  .nav-links li {
-    margin-left: 10px;
-    font-size: 10px; /*changed*/
-    justify-content: space-evenly; /*changed*/
+   .nav-links ul {
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    justify-content: center; 
   }
+
+  .nav-links li { 
+    margin-left: 5px;
+    font-size: 10px; 
+    justify-content: space-evenly; 
+  }
+  /*header header header header header*/
   
   body {
     font-size: 16px;
@@ -373,20 +695,6 @@ footer {
   .content {
     font-size: 18px;
     line-height: 1.5;
-  }
-
-  .footer-content {
-    flex-direction: column;  
-    align-items: center;      
-    text-align: center;       
-  }
-
-  .footer-content img {
-    margin: 5px 0;           
-  }
-
-  .parish-name, .contact {
-    margin-top: 10px;
   }
 
   .gallery {
@@ -403,10 +711,15 @@ footer {
     border-radius: 12px;
   }
 
+  #darkModeToggle {
+    margin-top: 10px;
+  }
+
+ /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
   .footer-content{
-    flex-direction: column; /*changed*/ 
+    flex-direction: column; 
     flex-wrap: wrap;     
-    padding: 10px; /*changed*/
+    padding: 10px; 
     place-items: center;
     }
     
@@ -418,7 +731,6 @@ footer {
     font-size: 0.8rem;
   }
 
-  /*added*/
   .logos img {
     margin-right: 0px; 
     height: 60px;
@@ -427,29 +739,26 @@ footer {
 }
 
 @media (min-width: 2000px) {
-
-  body {
-    font-size: 30px;               
-    line-height: 1.8;              
+body {
+    font-size: 30px;              
+    line-height: 1.8;            
   }
-
+  /*HEADER HEADER HEADER HEADER HEADER HEADER*/
   .logo-section img{
-    height: 120px;               
+    height: 120px;             
     width: 120px;
   }
 
    .nav-links ul {
     gap: 50px;                     
   }
-
-  .site-header .logo-section h1 {
-    font-size: 50px;              
-  }
-
+ 
   .nav-links ul {
     gap: 35px;                     
   }
 
+  /*header header header*/
+/*content content content*/
 
   .gallery-item img {
     gap: 40px;
@@ -494,30 +803,57 @@ footer {
     font-size: 1.2rem;
   }
 
+  /*footer footer footer*/
+ 
   .footer-content {
-    max-width: 1600px;            
+    max-width: 1600px;             
     margin: 0 auto;
   }
 
   .logos img{
-    height: 120px;               
+    height: 120px;             
     width: 120px;
   }
 
   .parish-name h3 {
-    font-size: 40px;               
+    font-size: 40px;              
   }
 
   .small-text .rights {
-    font-size: 30px;               
+    font-size: 30px;           
   }
 
   #contact-btn {
     padding: 20px 40px;            
     font-size: 30px;
-    width: 300px;             
+    width: 300px;            
   }
 }
 
+/*back to top*/
+  #backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* moves button to the right */
+  left: auto;  /* prevents left positioning */
+
+  display: none;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+#backToTop:hover {
+  background-color: #2980b9;
+}
 
 /*queries queries queries*/
+
+
