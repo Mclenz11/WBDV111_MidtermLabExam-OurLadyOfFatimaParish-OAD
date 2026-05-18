@@ -228,7 +228,7 @@ body {
 }
 
 .welcome img {
-  padding-top: 70px;
+  padding-top: 100px;
 }
 
 /*sched sched sched sched sched*/ 
@@ -639,10 +639,6 @@ body, header, section, footer {
   padding: 15px;
 }
 
-.welcome img{
-  padding-top: 50px
-}
-
 h2 {
   font-size: 1.8rem;
   text-align: center;
@@ -738,10 +734,6 @@ p {
     font-size: 15px;
     text-align: center;
   } 
-  
-  .welcome img{
-  padding-top: 25px
-  }
 
   .content h2 {
     font-size: 1.8rem;
