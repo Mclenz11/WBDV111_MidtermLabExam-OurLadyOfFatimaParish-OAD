@@ -9,14 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
-    <title>Our Lady of Fatima Parish-OAD -Homepage</title>
+    <title>Our Lady of Fatima Parish-OAD-Homepage</title>
 </head>
 <body>
   <header class="site-header">
     <div class="logo-section">
       <img src="./images/OLFP with bg.png" alt="Our Lady of Fatima Parish-OAD Logo">
       <img src="./images/DOF no BG.png" alt="Diocese of Antipolo Logo">
-      <h1>OUR LADY OF FATIMA PARISH-OAD</h1>
     </div>
     <nav class="nav-links">
       <ul>
@@ -34,19 +33,20 @@
         <li><a href="./donation.html">DONATION</a></li>
       </ul>
     </nav>
-  </header>
+  <button id="darkModeToggle">🌙</button>
+</header>
 
 
-  <main class="content">
-    <section class="welcome">
-    <img src="./images/6.png" alt="Church Image">
+<main class="content">
+  <section class="welcome">
+  <img src="./images/6.png" alt="Church Image">
      
-    <h2>Welcome to Our Lady of Fatima Parish-OAD Website!</h2>
-    <p>The Our Lady of Fatima Parish-OAD Antipolo is a Roman Catholic and a Missionary Parish in the Diocese of Antipolo,  under the care of the Augustinians or Ordo Augustiniensium Discalceatorum (OAD),  dedicated to bringing God's goodness to His people in the spirit of humility.</p>
-    </section>
-    <hr>
+  <h1>Welcome to Our Lady of Fatima Parish-OAD Website!</h1>  
+  <p>The Our Lady of Fatima Parish-OAD Antipolo is a Roman Catholic and a Missionary Parish in the Diocese of Antipolo,  under the care of the Augustinians or Ordo Augustiniensium Discalceatorum (OAD),  dedicated to bringing God's goodness to His people in the spirit of humility.</p> 
+  </section>
+  <hr>
 
-  <section class="mass-schedule">
+ <section class="mass-schedule">
     <picture>
       <source media="(max-width: 480px)" srcset="./images/12.png">
       <source media="(max-width: 768px)" srcset="./images/12.png"> <!--changed-->
@@ -74,9 +74,9 @@
 </section>
   
 <hr>
-  <!-- Vision and Mission Section -->
   <section class="vision-mission">
-    <picture>
+
+      <picture>
       <source media="(max-width: 480px)" srcset="./images/13.png">
       <source media="(max-width: 768px)" srcset="./images/13.png"> <!--changed-->
       <img src="./images/2.png" alt="Altar Image" class="bg-img">
@@ -92,56 +92,174 @@
     <div class="mvcontent">
       <h2>MISSION</h2>
       <p>
-        Form and train people in the work of spreading God’s Word to the Community. Strive to receive the Sacraments and be transformed for others; Give witness to the life and mission of the Church towards the realization of God’s Kingdom.
-      </p>
+        Form and train people in the work of spreading God’s Word to the Community. Strive to receive the Sacraments and be transformed for others; Give witness to the life and mission of the Church towards the realization of God’s Kingdom.</p>
     </div>
   </section>
   </section>
 <hr>
 
+<section class="form">
+<div class="form-container">
+    <h2>Send your questions!</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <div class="error" id="nameError"></div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <div class="error" id="emailError"></div>
+      </div>
+      <div class="form-group">
+        <label for="question">Your Question:</label>
+        <textarea id="question" required></textarea>
+        <div class="error" id="questionError"></div>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  <hr>
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <div class="logos">
-        <img src="./images/OLFP with bg.png" alt="Our Lady of Fatima Parish-OAD Logo">
-        <img src="./images/DOF no BG.png" alt="Diocese of Antipolo Logo">
-      </div>
-      <div class="parish-name">
-        <h3>OUR LADY OF FATIMA PARISH-OAD</h3>
-        <p class="small-text">
-          Our Lady of Fatima Parish-OAD, Sitio Capatagan, Pinugay road, San Jose, Antipolo City.
-        </p>
-        <p class="rights">ALL RIGHTS RESERVED 2026</p>
-      </div>
-      <div class="contact">
-        <button id="contact-btn">CONTACT US</button>
-        <nav id="contact-nav" class="hidden">
-          <ul>
-            <li><a href="mailto:ourladyoffatimaparish.oad@gmail.com" style="font-size: smaller;">Email: ourladyoffatimaparish.oad@gmail.com </a></li>
-            <li><a href="https://www.facebook.com/OurLadyOfFatimaParishOAD" target="_blank">Facebook</a></li>
-            <li><a href="tel:287248634">Phone Number:287248634 </a></li>
-          </ul>
-        </nav>
-      </div>
+<footer>
+  <div class="footer-content">
+        <div class="logos">
+            <img src="./images/OLFP with bg.png" alt="Our Lady of Fatima Parish-OAD Logo">
+            <img src="./images/DOF no BG.png" alt="Diocese of Antipolo Logo">
+        </div>
+        <div class="parish-name">
+            <h3>OUR LADY OF FATIMA PARISH-OAD</h3>
+            <p class="small-text">
+                Our Lady of Fatima Parish-OAD, Sitio Capatagan,
+                Pinugay Road, San Jose, Antipolo City.
+            </p>
+            <p class="rights">ALL RIGHTS RESERVED 2026</p>
+        </div>
+        <div class="contact">
+            <button id="contact-btn">CONTACT US</button>
+            <nav id="contact-nav" class="hidden">
+                <ul>
+                    <li>
+                        <a href="mailto:ourladyoffatimaparish.oad@gmail.com">
+                            Email: ourladyoffatimaparish.oad@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/OurLadyOfFatimaParishOAD" target="_blank">
+                            Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:287248634">
+                            Phone Number: 287248634
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-    
-  </footer>
+</footer>
 
   <script>
-    const contactBtn = document.getElementById('contact-btn');
-    const contactNav = document.getElementById('contact-nav');
-
-    contactBtn.addEventListener('click', () => {
-      contactNav.classList.toggle('hidden');
-    });
-
+    //Parish toggle button
     const parishToggle = document.getElementById('parish-toggle');
     const parishNav = document.getElementById('parish-nav');
 
-    parishToggle.addEventListener('click', () => {
-    parishNav.classList.toggle('hidden');
+    parishToggle.addEventListener("click", function(event) {
+      parishNav.classList.toggle("hidden");
+      event.stopPropagation();
+
+    document.addEventListener("click", function(event) {
+    if (!parishNav.classList.contains("hidden")) {
+      if (!parishNav.contains(event.target) && event.target !== parishToggle) {
+        parishNav.classList.add("hidden");
+      }
+    }
+  });    
+});
+
+    //Contact toggle button
+    const contactBtn = document.getElementById('contact-btn');
+    const contactNav = document.getElementById('contact-nav');
+
+    contactBtn.addEventListener("click", function(event) {
+      contactNav.classList.toggle("hidden");
+      event.stopPropagation();
+
+      document.addEventListener("click", function(event) {
+      if (!contactNav.classList.contains("hidden")) {
+      if (!contactNav.contains(event.target) && event.target !== contactBtn) {
+        contactNav.classList.add("hidden");
+      }
+    }
+    }); 
+  });
+
+    
+                                          //Form Validation Script Form Validation Script Form Validation Script 
+
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+
+      document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+      const name = document.getElementById('name').value.trim();
+      if (!/^[A-Za-z\s]+$/.test(name)) {
+        document.getElementById('nameError').textContent = "Name must contain only letters.";
+        valid = false;
+      }
+
+      const email = document.getElementById('email').value.trim();
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailPattern.test(email)) {
+        document.getElementById('emailError').textContent = "Enter a valid email address.";
+        valid = false;
+      }
+
+      const question = document.getElementById('question').value.trim();
+      if (question.length < 20) {
+        document.getElementById('questionError').textContent = "Question must be at least 20 characters.";
+        valid = false;
+      }
+
+    if (valid) {
+        alert("Your question is submitted successfully! Please wait for our response, which will be sent through your email or contact number.");
+        form.reset();
+      }
     });
+
+    //Dark Mode Toggle
+    const toggleBtn = document.getElementById("darkModeToggle");
+
+    toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+      toggleBtn.textContent = "☀️";
+    } else {
+      toggleBtn.textContent = "🌙";
+    }
+});
+
+    // Back to Top button functionality
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
   </script>
 </body>
 </html>
