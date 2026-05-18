@@ -382,6 +382,7 @@ footer {
 
 body.dark-mode {
   background-color: #121212;
+  background-image: none;
   color: #e0e0e0;
 }
 
