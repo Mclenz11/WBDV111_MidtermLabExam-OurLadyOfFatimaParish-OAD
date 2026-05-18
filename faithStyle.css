@@ -394,14 +394,12 @@ body.dark-mode a {
   color: #e0e0e0;
 }
 
-/* HEADER + MAIN CONTENT + FOOTER */
 body.dark-mode .site-header,
 body.dark-mode .content,
 body.dark-mode footer {
   background-color: #1f1f1f !important;
 }
 
-/* NAVIGATION LINKS */
 body.dark-mode .nav-links a {
   color: #faf6f6 !important;
 }
@@ -415,7 +413,6 @@ body.dark-mode .nav-links a:hover::after {
   width: 100%;
 }
 
-/* PARISH TOGGLE */
 body.dark-mode #parish-toggle {
   color: #ffffff;
 }
@@ -429,7 +426,6 @@ body.dark-mode #parish-toggle:hover::after {
   width: 100%;
 }
 
-/* DROPDOWNS */
 body.dark-mode #parish-nav,
 body.dark-mode #contact-nav {
   background-color: #1e1e1e;
@@ -447,7 +443,6 @@ body.dark-mode #parish-nav a:hover {
   color: #ffffff;
 }
 
-/* CONTENT */
 body.dark-mode .section-title h2,
 body.dark-mode .card-body,
 body.dark-mode p,
@@ -455,7 +450,6 @@ body.dark-mode li {
   color: white !important;
 }
 
-/* CARDS */
 body.dark-mode .card {
   background-color: #1f1f1f;
   color: white !important;
@@ -476,13 +470,11 @@ body.dark-mode .card h3 {
   color: white !important;
 }
 
-/* GALLERY ITEMS */
 body.dark-mode .gallery-item {
   background-color: #1f1f1f;
   border: 1px solid #333;
 }
 
-/* BUTTONS */
 body.dark-mode .btn,
 body.dark-mode #contact-btn,
 body.dark-mode #darkModeToggle {
@@ -495,17 +487,14 @@ body.dark-mode #contact-btn:hover {
   background-color: #303F9F;
 }
 
-/* FOOTER */
 body.dark-mode footer {
   background-color: #1f1f1f;
 }
 
-/* ERRORS */
 body.dark-mode .error {
   color: #ff6b6b;
 }
 
-/* SMOOTH TRANSITIONS */
 body,
 header,
 section,
@@ -521,7 +510,6 @@ footer,
     background 0.3s ease;
 }
 /*header header header*/
-/* MAIN CONTENT */
 
 body.dark-mode .section-title h2,
 body.dark-mode .card-body,
@@ -834,8 +822,8 @@ body {
   #backToTop {
   position: fixed;
   bottom: 20px;
-  right: 20px; /* moves button to the right */
-  left: auto;  /* prevents left positioning */
+  right: 20px; 
+  left: auto;  
 
   display: none;
   background-color: #3498db;
