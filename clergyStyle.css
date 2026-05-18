@@ -198,7 +198,7 @@ body {
       margin: 20px 0;
       font-family: "Libre Baskerville", serif;
       font-weight: bolder;
-      padding-top: 60px;
+      padding-top: 100px;
     }  
 
     .tile {
@@ -529,11 +529,6 @@ body, header, main, section, footer, img, .tile {
     padding: 4px 6px;     
     border-radius: 4px;   
   }
-
-main h2{
-  padding-top: 50px;
-}
-
   /*FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER*/
 .footer-content {
   flex-direction: column;  
@@ -592,9 +587,6 @@ main h2{
   }
 
 /*CONTENT CONTENT CONTENT CONTENT CONTENT*/
-  main h2{
-    padding-top: 30px;
-  }
 
   .tile img{
     padding: 10px;
