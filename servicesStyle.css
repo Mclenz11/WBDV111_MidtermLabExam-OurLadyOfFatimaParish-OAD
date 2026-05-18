@@ -10,11 +10,15 @@ body {
   font-family: "Baskerville", serif;
 }
 
-
-/*header header header*/
+/*header header*/
 
 .site-header {
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   justify-content: space-between;
   align-items: center;
   background-color: #3F51B5;
@@ -29,19 +33,13 @@ body {
 }
 
 .logo-section img {
-  height: 90px;
-  width: 90px;
+  height: 60px;
+  width: 60px;
   margin-right: 10px;
   border-radius: 50%; 
   
 }
 
-.logo-section h1 {
-  margin: 0;
-  font-family: "Libre Baskerville", serif;
-  font-size: 40px;
-  font-weight: bold;
-}
 hr {
   border: none;
   border-top: 10px solid rgba(0, 0, 0, 1);
@@ -60,9 +58,29 @@ hr {
 }
 
 .nav-links a {
+  position: relative;
   text-decoration: underline;
   color: black;
   font-weight: bold;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .parish-info {
@@ -71,12 +89,31 @@ hr {
 }
 
 #parish-toggle {
+  position: relative;
   color: #000000;
   text-decoration: underline;  
   cursor: pointer;
   font-weight: bold;
   display: inline-block;           
   text-align: center;
+}
+
+#parish-toggle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(248, 248, 246);
+  transition: width 0.3s ease;
+}
+
+#parish-toggle:hover {
+  color: rgb(255, 255, 255) !important; 
+}
+#parish-toggle:hover::after {
+  width: 100%;
 }
 
 #parish-nav {
@@ -115,88 +152,131 @@ hr {
   text-decoration: none;
 }
 
-
-/*header header header*/
-
-/*content content content*/
- body {
-  margin: 0;
-  font-family: "Baskerville", serif;
-  background-image: linear-gradient(to top, rgb(190, 190, 190), rgb(255, 255, 255)); /*changed*/
+#parish-nav {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
 }
- .image-banner {
-            display: flex;
-            justify-content: center;
-            gap: 10px; /*changed*/
-            padding: 20px 0;
-            /* removed the bg color*/
-        }
 
-        .image-banner img {
-            width: 320px; /*changed*/
-            height: 180px; /*changed*/
-            object-fit: cover;
-            border: 1px solid #ddd;
-        }
+.parish-info:hover #parish-nav {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
-        
-        .main-container {
-            max-width: 1100px;
-            margin: 20px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
+#darkModeToggle {
+  font-size: 24px;        
+  padding: 10px 14px;     
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+}
 
-        .section-title {
-            margin-bottom: 30px;
-        }
+/* =========================================================
+   3. MAIN CONTENT
+========================================================= */
 
-        .section-title h2 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
+/* IMAGE BANNER */
 
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            text-align: left;
-        }
+.image-banner {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 0;
+  margin-top: 100px;
+}
 
-        .card {
-            background: white;
-            border: none;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            overflow: hidden;
-            margin-bottom: 10px;
-        }
+.image-banner img {
+  width: 320px;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  transition: 0.4s ease;
+}
 
-        .card h3 {
-            background: #3498db; 
-            color: white;
-            margin: 0;
-            padding: 10px 15px;
-            font-size: 1rem;
-        }
+.image-banner img:hover {
+  transform: scale(1.03);
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
 
-        .card-body {
-            padding: 20px;
-            font-size: 0.85rem;
-            line-height: 1.6;
-        }
+/* MAIN CONTAINER */
 
-        .card-body ul {
-            padding-left: 20px;
-            margin: 0;
-        }
+.main-container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* SECTION TITLE */
+
+.section-title {
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* SERVICES GRID */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  text-align: left;
+}
 
 
-/*footer footer footer*/
-        
-      
+/* =========================================================
+   4. CARDS
+========================================================= */
+
+.card {
+  background: white;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+  background: #3498db;
+  color: white;
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+.card-body {
+  padding: 20px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.card-body ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+
+/* =========================================================
+   5. FOOTER
+========================================================= */
+
+/*FOOTER FOOTER FOOTER*/
 footer {
   background: #3F51B5;
   text-align: center;
@@ -211,20 +291,17 @@ footer {
   flex-wrap: wrap;
 }
 
-/*added*/
-.logos{
+.logos {
   margin-left: 15px;
 }
 
-/*changed*/
 .logos img {
- height: 90px;
+  height: 90px;
   width: 90px;
-  border-radius: 50%; 
+  border-radius: 50%;
   align-items: center;
 }
 
-/*added*/
 .parish-name {
   margin-top: 10px;
   margin-right: 10px;
@@ -254,19 +331,21 @@ footer {
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px;
-  margin-right: 10px; /*changed*/
-  width: 220px; 
+  margin-right: 10px;
+  width: 220px;
 }
 
 #contact-nav {
   position: absolute;
-  bottom: 100%;
-  left: 0;
-  background-color: #fff;
-  color: #3F51B5;
-  border-radius: 5px;
-  padding: 5px;
-  width: 220px;
+  bottom: 110%;
+  right: 0;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 260px;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 #contact-nav ul {
@@ -275,14 +354,34 @@ footer {
   padding: 0;
 }
 
+#contact-nav li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#contact-nav li:last-child {
+  border-bottom: none;
+}
+
+#contact-nav a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
 #contact-nav li:hover {
-  border: 2px solid #000000;
+  background-color: #f1f1f1;
+  border-radius: 5px;
 }
 
 .nav-buttons li:hover {
   background-color: #3F51B5;
   color: #fff;
 }
+
 .hidden {
   display: none;
 }
@@ -291,219 +390,388 @@ footer {
   font-size: 15px;
   margin-bottom: 10px;
 }
-/*footer footer footer*/
 
-/*queries queries queries*/
+/*FOOTER FOOTER FOOTER*/
+
+
+/* =========================================================
+   6. BUTTONS
+========================================================= */
+
+/* DARK MODE BUTTON */
+
+.dark-btn {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.dark-btn:hover {
+  background-color: #444;
+}
+
+/* BACK TO TOP BUTTON */
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: opacity 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: #2980b9;
+}
+
+
+/* =========================================================
+   7. DARK MODE
+========================================================= */
+
+/*header header header*/
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li,
+body.dark-mode a {
+  color: #e0e0e0;    
+}
+
+body.dark-mode header.site-header {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .nav-links a {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .nav-links a:hover {
+  color: #4da3ff !important;
+}
+
+body.dark-mode .nav-links a:hover::after {
+  background-color: #4da3ff !important;  
+  width: 100%;
+}
+
+body.dark-mode #parish-toggle {
+  color: #ffffff;   
+}
+
+body.dark-mode #parish-toggle:hover {
+  color: #4da3ff !important;  
+}
+
+body.dark-mode #parish-toggle:hover::after {
+  background-color: #4da3ff !important;  
+  width: 100%;
+}
+
+body.dark-mode #parish-nav a,
+body.dark-mode #contact-nav a{
+  color: #e0e0e0;
+}
+
+body.dark-mode #parish-nav a:hover {
+  color: #ffffff;
+}
+
+body.dark-mode #parish-nav,
+body.dark-mode #contact-nav {
+  background-color: #1e1e1e;   
+  border: 1px solid #333;     
+  border-radius: 6px;
+  padding: 5px;
+}
+
+
+
+/* CARDS */
+
+body.dark-mode .card {
+  background-color: #1f1f1f !important;
+  border: 1px solid #333 !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5) !important;
+}
+
+body.dark-mode .card:hover {
+  box-shadow: 0 8px 20px rgba(255,255,255,0.08);
+}
+
+body.dark-mode .card h3 {
+  background-color: #0d47a1 !important;
+}
+
+body.dark-mode .card-body {
+  background-color: #1f1f1f !important;
+  color: white !important;
+}
+
+/* TEXT */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode strong {
+  color: white !important;
+}
+
+/* FOOTER */
+
+body.dark-mode .btn,
+body.dark-mode #contact-btn,
+body.dark-mode #darkModeToggle {
+  background-color: #3F51B5;
+  color: #fff;
+}
+
+body.dark-mode .btn:hover,
+body.dark-mode #contact-btn:hover {
+  background-color: #303F9F;
+}
+
+body.dark-mode .error {
+  color: #ff6b6b;
+}
+
+body, header, section, footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* HR */
+
+body.dark-mode hr {
+  border-top: 10px solid white !important;
+}
+
+
+/* =========================================================
+   8. RESPONSIVE DESIGN
+========================================================= */
+
+/* TABLETS */
 
 @media (max-width: 768px) {
 
-    .site-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+  .site-header {
+  flex-direction: row;
+  text-align: center;
+  gap: 10px;
+}
 
-    .nav-links ul {
-        flex-direction: row; /*changed*/
-        gap: 10px;
-    }
+.site-header img {
+  height: 50px;
+  width: 50px;
+}
 
-    .image-banner {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
+.nav-links ul {
+  flex-direction: row; 
+  gap: 10px;
+}
 
-    .image-banner img {
-        width: 90%;
-        height: auto;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr; 
-    }
-
-    .main-container {
-        padding: 0 10px;
-    }
-
-  /*added*/
-     .footer-content {
-    flex-direction: column;  
-    align-items: center;      
-    text-align: center;       
+#darkModeToggle {
+    font-size: 12px;      
+    padding: 4px 6px;     
+    border-radius: 4px;   
   }
 
-  /*added*/
-  .footer-content img {
-    margin: 5px 0px;        
+  .image-banner {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
-  /*added*/
-  .contact { 
-    margin-top: 10px;
+  .image-banner img {
+    width: 90%;
+    height: auto;
   }
-  
- /*added*/
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-container {
+    padding: 0 10px;
+  }
+
+.footer-content {
+  flex-direction: column;  
+  align-items: center;      
+  text-align: center;       
+}
+
+.footer-content img {
+  margin: 5px 0px;          
+}
+
+.contact { 
+  margin-top: 10px;
+}
+   
 .parish-name {
   margin-right: 0px;
 }
 
-/*added*/
 .logos{
   margin-left: 0px;
 }
 
-  /*added*/  
-  #contact-btn {
-    margin-right: 0px;
-    margin-bottom: 10px;
-  }  
+#contact-btn {
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
 }
 
+/* MOBILE */
 
 @media (max-width: 480px) {
 
-    .site-header {
-        flex-direction: row; 
-        flex-wrap: wrap;     
-        padding: 10px 15px;
-    }
-
-    .logo-section h1 {
-        font-size: 20px;
-    }
-
-    /*added*/
-    .logo-section img{
-    height: 60px;
-    width: 60px;
-    }
-  
-    .nav-links ul {
-        flex-direction: row; 
-        flex-wrap: wrap;     
-        justify-content: center; /*changed*/
-    }
-
-    .nav-links li {
-      margin-left: 10px;
-      font-size: 10px; /*changed*/
-      justify-content: space-evenly; /*changed*/
-    }
-
-  /*added*/
-  .footer-content{
-    flex-direction: column; /*changed*/ 
+ .site-header { 
+    display: flex;
+    justify-content: center;    
+    align-items: center;      
+    flex-direction: row; 
     flex-wrap: wrap;     
-    padding: 10px; /*changed*/
+    padding: 7px 7px;
+  }
+  
+  .logo-section img{
+    height: 25px;
+    width: 25px;
+  }
+
+   .nav-links ul {
+    flex-direction: row; 
+    flex-wrap: wrap;     
+    justify-content: center; 
+  }
+
+  .nav-links li { 
+    margin-left: 5px;
+    font-size: 10px; 
+    justify-content: space-evenly; 
+  }
+
+.footer-content{
+    flex-direction: column; 
+    flex-wrap: wrap;     
+    padding: 10px; 
     place-items: center;
     }
-
-  /*added*/
+    
   .footer-content h3 {
     font-size: 1rem;        
   }
 
-  /*added*/
   .footer-content p {
     font-size: 0.8rem;
   }
 
- /*added*/
   .logos img {
     margin-right: 0px; 
     height: 60px;
     width: 60px;
   }
-
 }
 
-  @media (min-width: 2000px) {
+/* ULTRA WIDE SCREENS */
 
-  body {
-    font-size: 30px;               
-    line-height: 1.8;              
+@media (min-width: 2000px) {
+
+   body {
+    font-size: 30px;              
+    line-height: 1.8;            
   }
-
+  /*header header */
   .logo-section img{
-    height: 120px;               
+    height: 120px;             
     width: 120px;
   }
 
    .nav-links ul {
     gap: 50px;                     
   }
-  .site-header .logo-section h1 {
-    font-size: 50px;              
-  }
-
+ 
   .nav-links ul {
     gap: 35px;                     
   }
 
   .main-container {
     min-width: 2010px;
-    margin: 0 auto;    
-    padding: 20px;     
+    margin: 0 auto;
+    padding: 20px;
   }
 
-  .image-banner img{
-    gap: 40px;
+  .image-banner img {
     width: 600px;
-    height: 500px;                    
+    height: 500px;
   }
 
   .services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     min-width: 2010px;
   }
 
   .section-title h2 {
-    font-size: 45px;             
+    font-size: 45px;
   }
 
-  .section-title p {
-    font-size: 35px;             
-  }
-
-
-  .card h3 {
-    font-size: 40px;             
-  }
-
-
-  .card p,li {
+  .section-title p,
+  .card p,
+  .card li {
     font-size: 35px;
   }
 
-   .footer-content {
-    max-width: 1600px;            
+  .card h3 {
+    font-size: 40px;
+  }
+
+  /* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+  .footer-content {
+    max-width: 1600px;             
     margin: 0 auto;
   }
 
   .logos img{
-    height: 120px;               
+    height: 120px;             
     width: 120px;
   }
 
   .parish-name h3 {
-    font-size: 40px;               
+    font-size: 40px;              
   }
 
   .small-text .rights {
-    font-size: 30px;               
+    font-size: 30px;           
   }
 
   #contact-btn {
     padding: 20px 40px;            
     font-size: 30px;
-    width: 300px;             
+    width: 300px;            
   }
 }
-    
-}
-
-/*queries queries queries*/
