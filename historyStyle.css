@@ -747,6 +747,11 @@ body.dark-mode .card-body strong {
     color: #ffffff;
 }
 
+body.dark-mode footer{
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
 body.dark-mode .btn,
 body.dark-mode #contact-btn,
 body.dark-mode #darkModeToggle {
